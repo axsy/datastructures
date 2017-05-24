@@ -1,7 +1,7 @@
 package com.alekseyorlov.datastructures.stack;
 
-import com.alekseyorlov.datastructures.exception.StackEmptyException;
-import com.alekseyorlov.datastructures.exception.StackOverflowException;
+import com.alekseyorlov.datastructures.stack.exception.StackEmptyException;
+import com.alekseyorlov.datastructures.stack.exception.StackOverflowException;
 
 public class ArrayStack<T> implements Stack<T> {
 
