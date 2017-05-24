@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import exception.StackEmptyException;
-import exception.StackOverflowException;
+import com.alekseyorlov.datastructures.exception.StackEmptyException;
+import com.alekseyorlov.datastructures.exception.StackOverflowException;
 
 public class ArrayStackTest {
 
