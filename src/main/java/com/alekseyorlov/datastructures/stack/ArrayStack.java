@@ -6,7 +6,9 @@ import com.alekseyorlov.datastructures.stack.exception.StackOverflowException;
 public class ArrayStack<T> implements Stack<T> {
 
 	private T[] storage;
+	
 	private int size;
+	
 	private int top;
 	
 	@SuppressWarnings("unchecked")
