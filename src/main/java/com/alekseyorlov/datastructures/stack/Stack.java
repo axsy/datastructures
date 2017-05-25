@@ -12,6 +12,4 @@ public interface Stack<T> {
 	T top() throws StackEmptyException;
 	
 	boolean empty();
-	
-	int size();
 }

@@ -5,15 +5,14 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import com.alekseyorlov.datastructures.stack.exception.StackEmptyException;
-import com.alekseyorlov.datastructures.stack.exception.StackOverflowException;
 
-public class ArrayStackTest {
+public class LinkedListStackTest {
 
 	@Test(expected = StackEmptyException.class)
 	public void testPopEmpty() {
 
 		// given
-		final Stack<Integer> stack = new ArrayStack<>(10);
+		final Stack<Integer> stack = new LinkedListStack<>();
 		
 		// when
 		final Integer item = stack.pop();
@@ -26,7 +25,7 @@ public class ArrayStackTest {
 	public void testPushAndPop() {
 		
 		// given
-		final Stack<Integer> stack = new ArrayStack<>(10);
+		final Stack<Integer> stack = new LinkedListStack<>();
 		
 		// when
 		stack.push(15);
@@ -39,38 +38,25 @@ public class ArrayStackTest {
 		assertEquals(20, firstItem.intValue());
 		assertEquals(15, secondItem.intValue());
 	}
-	
-	@Test(expected = StackOverflowException.class)
-	public void testPushOverflowed() {
-		
-		// given
-		final Stack<Integer> stack = new ArrayStack<>(1);
-		stack.push(15);
-		
-		// then
-		stack.push(16);
-		
-		// then
-		// StackOverflowException is raised 
-	}
 
 	@Test
 	public void testEmpty() {
 		
 		// given
-		final Stack<Integer> stack = new ArrayStack<>(10);
+		final Stack<Integer> stack = new LinkedListStack<>();
 		
 		// when
 		final boolean isEmpty = stack.empty();
 		
-		// thne
+		// then
 		assertTrue(isEmpty);
 	}
 	
 	@Test(expected = StackEmptyException.class)
 	public void testTopEmpty() {
+		
 		// given
-		final Stack<Integer> stack = new ArrayStack<>(10);
+		final Stack<Integer> stack = new LinkedListStack<>();
 		
 		// when
 		final Integer item = stack.top();
@@ -78,12 +64,12 @@ public class ArrayStackTest {
 		// then
 		// StackEmptyException is raised
 	}
-
+	
 	@Test
 	public void testTop() {
 		
 		// given
-		final Stack<Integer> stack = new ArrayStack<>(10);
+		final Stack<Integer> stack = new LinkedListStack<>();
 		stack.push(15);
 		
 		// when

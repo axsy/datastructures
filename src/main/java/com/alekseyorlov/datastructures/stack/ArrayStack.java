@@ -53,9 +53,4 @@ public class ArrayStack<T> implements Stack<T> {
 		return result;
 	}
 
-	@Override
-	public int size() {
-		return size;
-	}
-
 }
