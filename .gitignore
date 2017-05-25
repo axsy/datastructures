@@ -49,7 +49,9 @@ local.properties
 # Code Recommenders
 .recommenders/
 
-# Development
+# IDE
 .checkstyle
 .classpath
 .project
+.idea
+*.iml
