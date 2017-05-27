@@ -7,7 +7,7 @@ public interface Stack<T> {
 
 	T pop() throws StackEmptyException;
 	
-	T push(T item) throws StackOverflowException;
+	void push(T item) throws StackOverflowException;
 	
 	T top() throws StackEmptyException;
 	

@@ -29,14 +29,12 @@ public class LinkedListStack<T> implements Stack<T> {
 	}
 
 	@Override
-	public T push(T item) {
+	public void push(T item) {
 		Node newNode = new Node();
 		newNode.item = item;
 		newNode.previous = this.node;
 		
 		this.node = newNode;
-		
-		return item;
 	}
 
 	@Override

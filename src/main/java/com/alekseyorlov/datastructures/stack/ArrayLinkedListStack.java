@@ -52,9 +52,7 @@ public class ArrayLinkedListStack<T> implements Stack<T> {
 	}
 
 	@Override
-	public T push(T item) throws StackOverflowException {
-		T result;
-		
+	public void push(T item) throws StackOverflowException {
 		if (node.top == node.size) {
 			Node newNode = new Node(capacity);
 			newNode.previous = node;
@@ -62,9 +60,6 @@ public class ArrayLinkedListStack<T> implements Stack<T> {
 		}
 		
 		node.storage[node.top++] = item;
-		result = item;
-		
-		return result;
 	}
 
 	public T top() throws StackEmptyException{

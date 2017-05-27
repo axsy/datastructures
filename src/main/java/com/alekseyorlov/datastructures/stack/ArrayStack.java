@@ -28,16 +28,12 @@ public class ArrayStack<T> implements Stack<T> {
 		return result;
 	}
 
-	public T push(T item) throws StackOverflowException {
-		T result;
+	public void push(T item) throws StackOverflowException {
 		if (top < size) {
 			storage[top++] = item;
-			result = item;
 		} else {
 			throw new StackOverflowException();
 		}
-		
-		return result;
 	}
 
 	public boolean empty() {
