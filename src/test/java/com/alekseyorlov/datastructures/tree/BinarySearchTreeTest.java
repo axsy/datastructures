@@ -45,4 +45,43 @@ public class BinarySearchTreeTest {
 		assertEquals(thirdValue, retrievedThirdValue);
 	}
 
+	@Test(expected = ItemNotFoundException.class)
+	public void testDeleteNotExisted() {
+		
+		// given
+		final BinarySearchTree<String> tree = new BinarySearchTree<>();
+		final String firstValue = "first value";
+		final String secondValue = "second value";
+		final String thirdValue = "third value";
+		
+		tree.put(5, firstValue);
+		tree.put(2, secondValue);
+		tree.put(3, thirdValue);
+		
+		// when
+		final String deletedSecondValue = tree.delete(4);
+		
+		// then
+		// ItemNotFoundException is raised
+	}
+	
+	@Test
+	public void testPutAndDelete() {
+		
+		// given
+		final BinarySearchTree<String> tree = new BinarySearchTree<>();
+		final String firstValue = "first value";
+		final String secondValue = "second value";
+		final String thirdValue = "third value";
+		
+		tree.put(5, firstValue);
+		tree.put(2, secondValue);
+		tree.put(3, thirdValue);
+		
+		// when
+		final String deletedSecondValue = tree.delete(2);
+		
+		// then
+		assertEquals(secondValue, deletedSecondValue);
+	}
 }

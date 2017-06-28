@@ -8,4 +8,6 @@ public interface Tree<K,V> {
 	
 	V get(K key) throws ItemNotFoundException;
 	
+	V delete(K key) throws ItemNotFoundException;
+	
 }
